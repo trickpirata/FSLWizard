@@ -13,6 +13,14 @@
 		B031E9A327A5E55500710C78 /* FSLWizardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031E9A227A5E55500710C78 /* FSLWizardTests.swift */; };
 		B031E9AD27A5E55500710C78 /* FSLWizardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031E9AC27A5E55500710C78 /* FSLWizardUITests.swift */; };
 		B031E9AF27A5E55500710C78 /* FSLWizardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031E9AE27A5E55500710C78 /* FSLWizardUITestsLaunchTests.swift */; };
+		B07EAC7727AA1D8600238A83 /* CaptureSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07EAC7627AA1D8600238A83 /* CaptureSessionManager.swift */; };
+		B07EAC7927AA21A100238A83 /* CaptureSessionManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07EAC7827AA21A100238A83 /* CaptureSessionManagerError.swift */; };
+		B07EAC7B27AA329800238A83 /* CGImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07EAC7A27AA329800238A83 /* CGImage+.swift */; };
+		B07EAC7D27AA338100238A83 /* MCLCameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07EAC7C27AA338100238A83 /* MCLCameraViewModel.swift */; };
+		B07EAC7F27AA51DC00238A83 /* MCLCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07EAC7E27AA51DC00238A83 /* MCLCameraViewController.swift */; };
+		B07EAC8127AA52B900238A83 /* MCLCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07EAC8027AA52B900238A83 /* MCLCameraView.swift */; };
+		B07EAC8327AA52F600238A83 /* MCLCameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07EAC8227AA52F600238A83 /* MCLCameraPreview.swift */; };
+		B07EAC8527AA545900238A83 /* MCLFingersOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07EAC8427AA545900238A83 /* MCLFingersOverlay.swift */; };
 		B0FE3E5227A5FFC600901C31 /* MCLSplashContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE3E5127A5FFC600901C31 /* MCLSplashContentView.swift */; };
 		B0FE3E5527A600A900901C31 /* FSLWizardUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FE3E5427A600A900901C31 /* FSLWizardUI.framework */; };
 		B0FE3E5627A600A900901C31 /* FSLWizardUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0FE3E5427A600A900901C31 /* FSLWizardUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -63,6 +71,14 @@
 		B031E9A827A5E55500710C78 /* FSLWizardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FSLWizardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B031E9AC27A5E55500710C78 /* FSLWizardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSLWizardUITests.swift; sourceTree = "<group>"; };
 		B031E9AE27A5E55500710C78 /* FSLWizardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSLWizardUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B07EAC7627AA1D8600238A83 /* CaptureSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureSessionManager.swift; sourceTree = "<group>"; };
+		B07EAC7827AA21A100238A83 /* CaptureSessionManagerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureSessionManagerError.swift; sourceTree = "<group>"; };
+		B07EAC7A27AA329800238A83 /* CGImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImage+.swift"; sourceTree = "<group>"; };
+		B07EAC7C27AA338100238A83 /* MCLCameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCLCameraViewModel.swift; sourceTree = "<group>"; };
+		B07EAC7E27AA51DC00238A83 /* MCLCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCLCameraViewController.swift; sourceTree = "<group>"; };
+		B07EAC8027AA52B900238A83 /* MCLCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCLCameraView.swift; sourceTree = "<group>"; };
+		B07EAC8227AA52F600238A83 /* MCLCameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCLCameraPreview.swift; sourceTree = "<group>"; };
+		B07EAC8427AA545900238A83 /* MCLFingersOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCLFingersOverlay.swift; sourceTree = "<group>"; };
 		B0FE3E5127A5FFC600901C31 /* MCLSplashContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCLSplashContentView.swift; sourceTree = "<group>"; };
 		B0FE3E5427A600A900901C31 /* FSLWizardUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FSLWizardUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0FE3E5827A6011700901C31 /* MCLCameraContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCLCameraContentView.swift; sourceTree = "<group>"; };
@@ -121,6 +137,7 @@
 		B031E99027A5E55300710C78 /* FSLWizard */ = {
 			isa = PBXGroup;
 			children = (
+				B07EAC7527AA1D7A00238A83 /* Service */,
 				B0FE3E4D27A5FF2D00901C31 /* Protocol */,
 				B0FE3E4A27A5FF1800901C31 /* Util */,
 				B0FE3E4B27A5FF1C00901C31 /* Model */,
@@ -159,9 +176,19 @@
 			path = FSLWizardUITests;
 			sourceTree = "<group>";
 		};
+		B07EAC7527AA1D7A00238A83 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B07EAC7627AA1D8600238A83 /* CaptureSessionManager.swift */,
+				B07EAC7827AA21A100238A83 /* CaptureSessionManagerError.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		B0FE3E4A27A5FF1800901C31 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				B07EAC7A27AA329800238A83 /* CGImage+.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -176,6 +203,7 @@
 		B0FE3E4C27A5FF2400901C31 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B07EAC8427AA545900238A83 /* MCLFingersOverlay.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,8 +235,12 @@
 		B0FE3E5027A5FF7800901C31 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				B07EAC7C27AA338100238A83 /* MCLCameraViewModel.swift */,
 				B0FE3E5827A6011700901C31 /* MCLCameraContentView.swift */,
 				B0FE3E6227A604CE00901C31 /* MCLCameraCoordinator.swift */,
+				B07EAC7E27AA51DC00238A83 /* MCLCameraViewController.swift */,
+				B07EAC8027AA52B900238A83 /* MCLCameraView.swift */,
+				B07EAC8227AA52F600238A83 /* MCLCameraPreview.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -361,9 +393,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0FE3E5E27A6026C00901C31 /* MCLMainCoordinator.swift in Sources */,
+				B07EAC8527AA545900238A83 /* MCLFingersOverlay.swift in Sources */,
+				B07EAC7B27AA329800238A83 /* CGImage+.swift in Sources */,
 				B0FE3E5927A6011700901C31 /* MCLCameraContentView.swift in Sources */,
+				B07EAC8127AA52B900238A83 /* MCLCameraView.swift in Sources */,
+				B07EAC7727AA1D8600238A83 /* CaptureSessionManager.swift in Sources */,
 				B0FE3E5227A5FFC600901C31 /* MCLSplashContentView.swift in Sources */,
+				B07EAC7D27AA338100238A83 /* MCLCameraViewModel.swift in Sources */,
 				B0FE3E6327A604CE00901C31 /* MCLCameraCoordinator.swift in Sources */,
+				B07EAC8327AA52F600238A83 /* MCLCameraPreview.swift in Sources */,
+				B07EAC7927AA21A100238A83 /* CaptureSessionManagerError.swift in Sources */,
+				B07EAC7F27AA51DC00238A83 /* MCLCameraViewController.swift in Sources */,
 				B031E99227A5E55300710C78 /* FSLWizardApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,6 +568,7 @@
 				DEVELOPMENT_TEAM = 59DTPWDE56;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs the camera to detectsign language";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -557,6 +598,7 @@
 				DEVELOPMENT_TEAM = 59DTPWDE56;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs the camera to detectsign language";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
