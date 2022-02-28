@@ -10,6 +10,7 @@ import SwiftUI
 
 struct MCLCameraView: UIViewControllerRepresentable {
     var pointsProcessorHandler: (([CGPoint]) -> Void)?
+    var predictions:((String) -> Void)?
     
     func makeUIViewController(context: Context) -> MCLCameraViewController {
         let cvc = MCLCameraViewController()

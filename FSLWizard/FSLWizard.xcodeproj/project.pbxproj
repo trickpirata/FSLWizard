@@ -21,6 +21,8 @@
 		B07EAC8127AA52B900238A83 /* MCLCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07EAC8027AA52B900238A83 /* MCLCameraView.swift */; };
 		B07EAC8327AA52F600238A83 /* MCLCameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07EAC8227AA52F600238A83 /* MCLCameraPreview.swift */; };
 		B07EAC8527AA545900238A83 /* MCLFingersOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07EAC8427AA545900238A83 /* MCLFingersOverlay.swift */; };
+		B0F1D0E527CD477C00112BAC /* ASL Classifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B0F1D0E427CD477C00112BAC /* ASL Classifier.mlmodel */; };
+		B0F1D0E727CD5A7700112BAC /* ASLalphabetClassifier_Half.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B0F1D0E627CD5A7700112BAC /* ASLalphabetClassifier_Half.mlmodel */; };
 		B0FE3E5227A5FFC600901C31 /* MCLSplashContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE3E5127A5FFC600901C31 /* MCLSplashContentView.swift */; };
 		B0FE3E5527A600A900901C31 /* FSLWizardUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FE3E5427A600A900901C31 /* FSLWizardUI.framework */; };
 		B0FE3E5627A600A900901C31 /* FSLWizardUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0FE3E5427A600A900901C31 /* FSLWizardUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -79,6 +81,8 @@
 		B07EAC8027AA52B900238A83 /* MCLCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCLCameraView.swift; sourceTree = "<group>"; };
 		B07EAC8227AA52F600238A83 /* MCLCameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCLCameraPreview.swift; sourceTree = "<group>"; };
 		B07EAC8427AA545900238A83 /* MCLFingersOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCLFingersOverlay.swift; sourceTree = "<group>"; };
+		B0F1D0E427CD477C00112BAC /* ASL Classifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "ASL Classifier.mlmodel"; sourceTree = "<group>"; };
+		B0F1D0E627CD5A7700112BAC /* ASLalphabetClassifier_Half.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ASLalphabetClassifier_Half.mlmodel; sourceTree = "<group>"; };
 		B0FE3E5127A5FFC600901C31 /* MCLSplashContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCLSplashContentView.swift; sourceTree = "<group>"; };
 		B0FE3E5427A600A900901C31 /* FSLWizardUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FSLWizardUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0FE3E5827A6011700901C31 /* MCLCameraContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCLCameraContentView.swift; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 		B0FE3E4B27A5FF1C00901C31 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B0F1D0E427CD477C00112BAC /* ASL Classifier.mlmodel */,
+				B0F1D0E627CD5A7700112BAC /* ASLalphabetClassifier_Half.mlmodel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -395,6 +401,7 @@
 				B0FE3E5E27A6026C00901C31 /* MCLMainCoordinator.swift in Sources */,
 				B07EAC8527AA545900238A83 /* MCLFingersOverlay.swift in Sources */,
 				B07EAC7B27AA329800238A83 /* CGImage+.swift in Sources */,
+				B0F1D0E527CD477C00112BAC /* ASL Classifier.mlmodel in Sources */,
 				B0FE3E5927A6011700901C31 /* MCLCameraContentView.swift in Sources */,
 				B07EAC8127AA52B900238A83 /* MCLCameraView.swift in Sources */,
 				B07EAC7727AA1D8600238A83 /* CaptureSessionManager.swift in Sources */,
@@ -404,6 +411,7 @@
 				B07EAC8327AA52F600238A83 /* MCLCameraPreview.swift in Sources */,
 				B07EAC7927AA21A100238A83 /* CaptureSessionManagerError.swift in Sources */,
 				B07EAC7F27AA51DC00238A83 /* MCLCameraViewController.swift in Sources */,
+				B0F1D0E727CD5A7700112BAC /* ASLalphabetClassifier_Half.mlmodel in Sources */,
 				B031E99227A5E55300710C78 /* FSLWizardApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

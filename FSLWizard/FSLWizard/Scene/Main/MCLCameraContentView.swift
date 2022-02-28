@@ -10,6 +10,7 @@ import SwiftUI
 
 struct MCLCameraContentView: View {
     @State private var overlayPoints: [CGPoint] = []
+    @State private var prediction: String = ""
     @StateObject private var model = MCLCameraViewModel()
     
     var image: CGImage?
@@ -17,14 +18,20 @@ struct MCLCameraContentView: View {
     private let label = Text("Capture feed")
     var body: some View {
         ZStack {
-            MCLCameraView {
-              overlayPoints = $0
-            }
+            MCLCameraView(pointsProcessorHandler: {
+                overlayPoints = $0
+            }, predictions: {
+                prediction = $0
+            })
             .overlay(
               FingersOverlay(with: overlayPoints)
                 .foregroundColor(.red)
-            )
-        }.edgesIgnoringSafeArea(.all)
+            ).edgesIgnoringSafeArea(.all)
+            
+            
+        }.onAppear {
+            print("appearing")
+        }
     }
 }
 
