@@ -1,16 +1,23 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "Stinsen",
-        "repositoryURL": "https://github.com/rundfunk47/stinsen",
-        "state": {
-          "branch": null,
-          "revision": "36d97964075dc770046ddef9346a29bfa8982d6d",
-          "version": "2.0.7"
-        }
+  "pins" : [
+    {
+      "identity" : "stinsen",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rundfunk47/stinsen",
+      "state" : {
+        "revision" : "36d97964075dc770046ddef9346a29bfa8982d6d",
+        "version" : "2.0.7"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "swiftui-side-menu",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/globulus/swiftui-side-menu.git",
+      "state" : {
+        "revision" : "7a4dc9412bd8c2abf8b6d58bae620ba892f2133b",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 2
 }

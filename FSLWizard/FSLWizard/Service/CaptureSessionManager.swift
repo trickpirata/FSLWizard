@@ -7,6 +7,7 @@
 //
 
 import AVFoundation
+import Combine
 
 class CaptureSessionManager: NSObject, ObservableObject {
     enum Status {
@@ -19,11 +20,12 @@ class CaptureSessionManager: NSObject, ObservableObject {
     static let shared = CaptureSessionManager()
     
     @Published var error: CaptureSessionManagerError?
-    @Published var current: CVPixelBuffer?
+    @Published var current: CMSampleBuffer?
     
     
     let session = AVCaptureSession()
     
+    private var videoDataOutput: AVCaptureVideoDataOutput?
     private let sessionQueue = DispatchQueue(label: "ph.edu.mcl.FSLWizard.CaptureSessionQueue")
     private let videoOutputQueue = DispatchQueue(label: "ph.edu.mcl.FSLWizard.VideoOutputQueue",
                                                  qos: .userInitiated,
@@ -34,6 +36,67 @@ class CaptureSessionManager: NSObject, ObservableObject {
     private override init() {
         super.init()
         configure()
+    }
+    
+    func changeSource() {
+        let session = session
+        //Remove existing input
+        guard let currentCameraInput: AVCaptureInput = session.inputs.first else {
+            return
+        }
+        
+        //Indicate that some changes will be made to the session
+        session.beginConfiguration()
+        
+        defer {
+            session.commitConfiguration()
+        }
+        
+        session.removeInput(currentCameraInput)
+        
+        //Get new input
+        var newCamera: AVCaptureDevice! = nil
+        if let input = currentCameraInput as? AVCaptureDeviceInput {
+            if (input.device.position == .back) {
+                newCamera = cameraWithPosition(position: .front)
+            } else {
+                newCamera = cameraWithPosition(position: .back)
+            }
+        }
+        
+        //Add input to session
+        var err: NSError?
+        var newVideoInput: AVCaptureDeviceInput!
+        do {
+            newVideoInput = try AVCaptureDeviceInput(device: newCamera)
+        } catch let err1 as NSError {
+            err = err1
+            newVideoInput = nil
+        }
+        
+        if newVideoInput == nil || err != nil {
+            set(error: .cameraUnavailable)
+        } else {
+            session.addInput(newVideoInput)
+        }
+        
+        
+        guard let connection = self.videoDataOutput?.connection(with: AVMediaType.video),
+              connection.isVideoOrientationSupported else { return }
+        connection.videoOrientation = .portrait
+    }
+    
+    private func addCameraInput() {
+        guard let device = cameraWithPosition(position: .back) else {
+            set(error: .cameraUnavailable)
+            return
+        }
+        let cameraInput = try! AVCaptureDeviceInput(device: device)
+        self.session.addInput(cameraInput)
+    }
+    
+    private func cameraWithPosition(position: AVCaptureDevice.Position) -> AVCaptureDevice? {
+        return AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: position)
     }
     
     private func set(error: CaptureSessionManagerError?) {
@@ -81,7 +144,7 @@ class CaptureSessionManager: NSObject, ObservableObject {
         let device = AVCaptureDevice.default(
             .builtInWideAngleCamera,
             for: .video,
-            position: .front)
+            position: .back)
         guard let camera = device else {
             set(error: .cameraUnavailable)
             status = .failed
@@ -103,15 +166,20 @@ class CaptureSessionManager: NSObject, ObservableObject {
             return
         }
         
-        let videoOutput = getVideoDataOutput()
+        videoDataOutput = getVideoDataOutput()
         
-        if session.canAddOutput(videoOutput) {
-            session.addOutput(videoOutput)
+        guard let videoDataOutput = videoDataOutput else {
+            set(error: .cannotAddOutput)
+            return
+        }
+        
+        if session.canAddOutput(videoDataOutput) {
+            session.addOutput(videoDataOutput)
             
-            videoOutput.videoSettings =
+            videoDataOutput.videoSettings =
             [kCVPixelBufferPixelFormatTypeKey as String: kCVPixelFormatType_32BGRA]
             
-            let videoConnection = videoOutput.connection(with: .video)
+            let videoConnection = videoDataOutput.connection(with: .video)
             videoConnection?.videoOrientation = .portrait
         } else {
             set(error: .cannotAddOutput)
@@ -127,7 +195,6 @@ class CaptureSessionManager: NSObject, ObservableObject {
         
         sessionQueue.async {
             self.configureCaptureSession()
-            self.session.startRunning()
         }
     }
     
@@ -148,11 +215,7 @@ extension CaptureSessionManager: AVCaptureVideoDataOutputSampleBufferDelegate {
         didOutput sampleBuffer: CMSampleBuffer,
         from connection: AVCaptureConnection
     ) {
-        if let buffer = sampleBuffer.imageBuffer {
-            DispatchQueue.main.async {
-                self.current = buffer
-            }
-        }
+        self.current = sampleBuffer
     }
 }
 

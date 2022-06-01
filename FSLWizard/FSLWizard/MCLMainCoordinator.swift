@@ -26,7 +26,7 @@ extension MCLMainCoordinator {
         MCLSplashContentView()
     }
     
-    func makeCamera() -> NavigationViewCoordinator<MCLCameraCoordinator> {
-        return NavigationViewCoordinator(MCLCameraCoordinator())
+    func makeCamera() -> MCLTabCoordinator {
+        return MCLTabCoordinator()
     }
 }

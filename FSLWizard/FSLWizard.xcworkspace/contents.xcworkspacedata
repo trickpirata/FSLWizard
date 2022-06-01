@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "container:FSLWizard.xcodeproj">
+      location = "container:/Users/trick/Documents/Work/Xcode/FSLWizard/FSLWizard/ASLWizard.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:../FSLWizardUI/FSLWizardUI.xcodeproj">

@@ -73,7 +73,7 @@ public extension MCLColorStyler {
     var primaryCustomBackground: UIColor { UIColor(red: 0.094, green: 0.151, blue: 0.321, alpha: 1.00) }
     var secondaryCustomBackground: UIColor { UIColor(red: 0.891, green: 0.931, blue: 0.969, alpha: 1.00) }
 
-    var buttonColor1: UIColor { UIColor(red: 46.0/255.0, green: 123.0/255.0, blue: 232.0/255.0, alpha: 1.0) }
+    var buttonColor1: UIColor { UIColor(red: 0.094, green: 0.151, blue: 0.408, alpha: 1.00) }
     var buttonColor2: UIColor { .white }
     var buttonColor3: UIColor { UIColor(red: 64.0/255.0, green: 94.0/255.0, blue: 255.0/255.0, alpha: 1.0)}
     var buttonColor4: UIColor { UIColor(red: 71.0/255.0, green: 93.0/255.0, blue: 245.0/255.0, alpha: 1.0)}
